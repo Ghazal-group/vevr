@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VEVR · Business finance, brought together
 
 A responsive Nigerian business-finance workspace with a connected React frontend, Express API and PostgreSQL-compatible storage. **Every business starts empty.** No demo login, seeded balances, fabricated chart series, live bank claims, or automatic lending decisions.
@@ -78,3 +79,7 @@ This is a working bookkeeping application, not a regulated bank. Arrange an inde
 ## Interface update
 
 The workspace now uses horizontal navigation on desktop and a compact mobile directory. See `DESIGN-REVIEW.md` for the redesign, unchanged backend boundary, test coverage and remaining deployment checks. To reproduce the extended Chromium verification after building, run `node tests/browser.mjs --polish`. This release includes a compiled `dist/` for convenience; `npm run build` regenerates it from source.
+=======
+# vevr
+VEVR is an AI-powered financial operating system that helps businesses manage sales, expenses, inventory and cash flow in one place while transforming business activity into financial insights that support tax readiness and access to credit.
+>>>>>>> 9fa555e93d3a5b370671c63df9fff50fde3c3c49
