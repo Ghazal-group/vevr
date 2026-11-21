@@ -1,0 +1,424 @@
+/* Public brand and shared interaction primitives: no API or state dependencies. */
+:root {
+  --pine: #103c30;
+  --ink: #162e25;
+  --muted: #596b60;
+  --line: #dce5de;
+  --lime: #def1a6;
+}
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.publicsite {
+  background: #fbfcf7;
+  color: #143127;
+}
+.publicsite > header {
+  background: #092f25;
+  border-bottom: 1px solid #395748;
+}
+.publicsite .top {
+  height: 70px;
+}
+.publicsite .top .light {
+  background: #ddedb3;
+  color: #193e28;
+  border-radius: 6px;
+}
+.publicsite .hero {
+  position: relative;
+  isolation: isolate;
+  background: #092f25;
+  color: #f5f8ef;
+  border-bottom: 0;
+}
+.publicsite .hero:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, #90be9210 1px, transparent 1px),
+    linear-gradient(#90be9210 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(95deg, transparent 12%, #000);
+}
+.publicsite .herogrid {
+  grid-template-columns: 1.04fr 1fr;
+  padding: 46px 0 36px;
+  gap: 5.2%;
+}
+.publicsite .pill {
+  display: inline-flex;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #658465;
+  border-radius: 0;
+  color: #c7dda4;
+  padding: 0 0 8px;
+  letter-spacing: 1.65px;
+  font-size: 10px;
+}
+.publicsite h1 {
+  font-size: clamp(48px, 5vw, 80px);
+  font-weight: 550;
+  line-height: 1.03;
+  letter-spacing: -0.06em;
+  margin: 21px 0 17px;
+}
+.publicsite .copy h1 em {
+  color: #d3e9a9;
+  font-weight: 400;
+}
+.publicsite .copy p {
+  color: #d4dfd4;
+  max-width: 490px;
+  line-height: 1.62;
+}
+.publicsite .copy .primary {
+  background: #dfefb9;
+  color: #143523;
+}
+.publicsite .copy .secondary {
+  border-color: #66806d;
+  color: #e6eee3;
+  background: #193e30;
+}
+.publicsite .trust {
+  color: #c5d6c5;
+}
+.publicsite .trust span {
+  background: #65806a;
+}
+.publicsite .visual {
+  background: #e9efdd;
+  border: 1px solid #b3c7ad;
+  border-radius: 8px 64px 8px 8px;
+  aspect-ratio: 1.36;
+}
+.publicsite .voice {
+  left: -19px;
+  bottom: 16%;
+  background: #173c2b;
+  border: 1px solid #7c9e73;
+  box-shadow: 0 4px 12px #103b2320;
+}
+.publicsite .logged {
+  color: #1b3827;
+}
+.publicsite .corner {
+  letter-spacing: 1.2px;
+}
+.publicsite .controls {
+  color: #d0dece;
+  border-color: #486754;
+}
+.publicsite .controls b {
+  color: #e2efc6;
+}
+.publicsite .controls button {
+  color: #e5f0db;
+  border-color: #627c66;
+  width: 34px;
+  height: 34px;
+}
+.publicsite .controls .dash {
+  background: linear-gradient(to right, #d2e7ac 33%, #49644e 33%);
+}
+.publicsite .features {
+  padding-top: 36px;
+}
+.publicsite .sectionhead {
+  margin: 10px 0 22px;
+}
+.publicsite .cards button {
+  background: #fff;
+  border: 1px solid #d7e1d5;
+  border-radius: 9px;
+  padding: 18px 20px;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    transform 0.15s;
+}
+.publicsite .cards button:hover {
+  background: #f4f8ee;
+  border-color: #a6bba3;
+  transform: translateY(-2px);
+}
+.publicsite .cardtop span {
+  background: #e6efdc;
+  border-radius: 7px;
+}
+.publicsite .cardtop small {
+  color: #586f5b;
+}
+.publicsite footer {
+  font-size: 12px;
+}
+.publicsite .editor {
+  width: min(470px, 92vw);
+  padding: 0;
+  border: 1px solid #cfddce;
+  border-radius: 12px;
+  color: var(--ink);
+}
+.publicsite .editor::backdrop {
+  background: #102c23b3;
+}
+.publicsite .dialogin {
+  position: relative;
+  padding: 28px;
+}
+.publicsite .dialogin h2 {
+  font-size: 30px;
+  margin: 10px 24px 14px 0;
+}
+.publicsite .dialogin p {
+  line-height: 1.65;
+  color: var(--muted);
+}
+.publicsite .dialogin .primary {
+  margin-top: 18px;
+}
+.publicsite .dialogin .xbtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 7px;
+}
+.publicsite .kicker,
+.authpage .kicker {
+  font: 600 10px/1.4 monospace;
+  letter-spacing: 1.4px;
+  color: #4c6b51;
+}
+.authpage {
+  background: #fafcf8;
+}
+.authpage aside {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #0d372a;
+}
+.authpage aside:after {
+  content: "";
+  position: absolute;
+  inset: 35% -28% -36% 18%;
+  z-index: -1;
+  background: repeating-radial-gradient(
+    ellipse at 100% 100%,
+    transparent 0 15px,
+    #c3dea222 16px 17px
+  );
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+.authpage .eyebrow {
+  letter-spacing: 1.45px;
+}
+.authpage .inputbox input,
+.authpage form > label input {
+  min-height: 44px;
+  border-color: #cad7cc;
+}
+.authpage form .primary {
+  border-radius: 7px;
+  min-height: 44px;
+}
+.authpage .onboardextra {
+  padding: 10px 12px;
+  background: #eef4e9;
+  border-radius: 6px;
+  margin: 12px 0;
+  color: #456249;
+  font-size: 13px;
+}
+.authpage .onboardextra summary {
+  cursor: pointer;
+}
+.authpage input:focus-visible,
+.publicsite button:focus-visible,
+.authpage button:focus-visible {
+  outline: 3px solid #70a681;
+  outline-offset: 3px;
+}
+.authpage [role="alert"] {
+  background: #f9eae5;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+.authpage form p[role="status"]:not(:empty) {
+  padding: 10px 12px;
+  background: #edf3e9;
+  border-radius: 6px;
+}
+.authpage button:disabled {
+  opacity: 0.6;
+}
+.authpage form .link {
+  color: #19683e;
+}
+.publicsite button:not(:disabled):active,
+.authpage button:not(:disabled):active {
+  transform: translateY(1px);
+}
+@media (max-width: 850px) {
+  .publicsite .visual {
+    aspect-ratio: 1.05;
+  }
+  .publicsite .top nav {
+    gap: 10px;
+  }
+  .publicsite .herogrid {
+    gap: 3%;
+  }
+  .publicsite .logged {
+    right: 5px;
+  }
+}
+@media (max-width: 650px) {
+  .publicsite .top {
+    height: 60px;
+  }
+  .publicsite .herogrid {
+    grid-template-columns: 1fr;
+    padding: 28px 0 20px;
+    gap: 24px;
+  }
+  .publicsite .visual {
+    width: 98%;
+    aspect-ratio: 1.55;
+    border-top-right-radius: 44px;
+  }
+  .publicsite h1 {
+    font-size: clamp(42px, 9.7vw, 60px);
+    margin: 16px 0 12px;
+  }
+  .publicsite .copy p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .publicsite .hero .actions {
+    gap: 8px;
+  }
+  .publicsite .actions .primary,
+  .publicsite .actions .secondary {
+    padding: 12px 13px;
+    font-size: 13px;
+  }
+  .publicsite .voice {
+    left: -5px;
+    bottom: 17%;
+    padding: 9px;
+  }
+  .publicsite .logged {
+    padding: 8px;
+    right: 3px;
+  }
+  .publicsite .trust {
+    font-size: 11px;
+  }
+  .publicsite .features {
+    padding-top: 26px;
+  }
+  .publicsite .controls > div {
+    gap: 7px;
+  }
+  .publicsite .controls button {
+    width: 32px;
+    height: 32px;
+  }
+  .publicsite .dash {
+    width: 30px;
+  }
+  .publicsite .kicker {
+    font-size: 9px;
+  }
+  .authpage form {
+    padding: 28px 0;
+  }
+  .authpage :is(input, select) {
+    font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  .publicsite .controls {
+    font-size: 10px;
+  }
+  .publicsite .voice .wave {
+    display: none;
+  }
+  .publicsite .logged {
+    bottom: 4%;
+  }
+  .publicsite .trust {
+    gap: 5px;
+  }
+  .publicsite .cardtop small {
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: Inter;
+  src: url("/fonts/workspace.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "VEVR Editorial";
+  src: url("/fonts/editorial.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+}
+.publicsite em,
+.authpage em,
+.assistantintro em {
+  font-family: "VEVR Editorial", Georgia, serif;
+  font-style: italic;
+  letter-spacing: -0.035em;
+}
+.publicsite .hero h1 {
+  font-weight: 515;
+  letter-spacing: -0.065em;
+}
+.publicsite .hero h1 em {
+  font-size: 1.09em;
+  line-height: 0.98;
+}
+.publicsite .top .login {
+  font-weight: 500;
+}
+.publicsite .controls button:hover {
+  background: #28503b;
+}
+.publicsite .cards h3 {
+  font-weight: 570;
+}
+.publicsite .tag {
+  color: #324e38;
+}
+.publicsite .hero .copy p {
+  font-size: clamp(15px, 1.2vw, 18px);
+}
